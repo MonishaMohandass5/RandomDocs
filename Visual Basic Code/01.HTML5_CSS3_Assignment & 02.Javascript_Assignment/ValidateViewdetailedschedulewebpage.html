@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <style type="text/css">
+        body {
+            background-color: lavender;
+            color: blue;
+        }
+
+        div {
+            border-style: solid;
+            color: lightblue;
+            border-width: 75px;
+        }
+    </style>
+    <script>
+        function ValidateFunction() {
+            if (document.Joytrip.rb[0].checked == false && document.Joytrip.rb[1].checked == false && document.Joytrip.rb[2].checked == false && document.Joytrip.rb[3].checked == false) {
+                alert("Please select the Payment Mode!");
+                document.Joytrip.rb.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name=J oytrip>
+        <center>
+            <div>
+                <h1 style="color : blue">
+                    <U>Joy Trip</U>
+                </h1>
+                <table width=5 0% border="5">
+                    <tr>
+                        <td colspan="4" style="color:blue">
+                            <center>View My Schedule</center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                Select</center>
+                        </td>
+                        <td style="color:blue">
+                            <center>
+                                Status</center>
+                        </td>
+                        <td style="color:blue">
+                            <center>
+                                Start Time</center>
+                        </td>
+                        <td style="color:blue">
+                            <center>
+                                Total Fare(Rs)</center>
+                        </td>
+
+                    </tr>
+                    < <tr>
+                        <td colspan="4" style="background-color:yellow">
+                            <center>Luxury</center>
+                        </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <center><input type="radio" name="rb" /></center>
+                            </td>
+                            <td>
+                                Available
+                            </td>
+                            <td>
+                                9PM
+                            </td>
+                            <td>
+                                900
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td>
+                                <center><input type="radio" name="rb" /></center>
+                            </td>
+                            <td>
+                                Available
+                            </td>
+                            <td>
+                                10PM
+                            </td>
+                            <td>
+                                900
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" style="background-color:yellow">
+                                <center>Deluxe</center>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <center><input type="radio" name="rb" /></center>
+                            </td>
+                            <td>
+                                Available
+                            </td>
+                            <td>
+                                8PM
+                            </td>
+                            <td>
+                                700
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <center><input type="radio" name="rb" /></center>
+                            </td>
+                            <td>
+                                Available
+                            </td>
+                            <td>
+                                9PM
+                            </td>
+                            <td>
+                                700
+                            </td>
+                        </tr>
+                </table><br><br>
+                <table>
+                    <tr>
+                        <input type="button" value="Book Ticket" onclick="ValidateFunction()">
+        </center>
+        </tr><br><br>
+        <tr>
+            <center><input type="button" value="Home" />
+            </center>
+        </tr>
+        </table>
+        </div>
+        </center>
+    </form>
+</body>
+
+</html>

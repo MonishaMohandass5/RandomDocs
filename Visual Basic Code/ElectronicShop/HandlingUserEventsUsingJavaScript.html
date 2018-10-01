@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <style>
+        body {
+            
+            width:60%;
+            margin-right: 5%;
+            margin-left: 20%;
+            margin-top: 5%;
+            margin-bottom: 5%;              
+        }
+
+    </style>
+    <script>
+        function ValidateFunction() {
+            var input1 = document.Calculator.EnterFirstNumber.value;
+            var value1 = parseInt(input1);
+            var input2 = document.Calculator.EnterSecondNumber.value;
+            var value2 = parseInt(input2);
+            var operate = document.getElementById("Select");
+            var output = operate.options[operate.selectedIndex].value;
+            var Result;
+
+            if(output == "Add")
+            {
+                Result = value1+value2;
+                alert("Output = "+Result);
+            }
+
+            if(output == "Subtract")
+            {
+                Result = value1-value2;
+                alert("Output = "+Result);
+            }
+
+            if(output == "Multiply")
+            {
+                Result = value1*value2;
+                alert("Output = "+Result);
+            }
+
+            if(output == "Divide")
+            {
+                Result = value1/value2;
+                alert("Output = "+Result);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="Calculator">
+        <label for="Enter First Number">Enter First Number</label><br>
+        <input type="number" name="EnterFirstNumber"><br><br>
+        <label for="Enter Second Number">Enter Second Number</label><br>
+        <input type="number" name="EnterSecondNumber"><br><br>
+        <label for="Select">Select</label><br>
+        <select id="Select">
+                              <option value = "Add">Add</option>
+                              <option value = "Subtract">Subtract</option>
+                              <option value = "Multiply">Multiply</option>
+                              <option value = "Divide">Divide</option>
+        </select><br><br></tr>
+        <button onclick="ValidateFunction()">Compute</button>
+    </form>
+
+</body>
+
+</html>

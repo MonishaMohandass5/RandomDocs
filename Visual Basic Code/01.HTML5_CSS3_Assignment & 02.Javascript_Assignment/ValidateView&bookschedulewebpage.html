@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: lavender;
+            color: blue;
+        }
+
+        div {
+            border-style: solid;
+            color: lightblue;
+            border-width: 75px;
+        }
+    </style>
+    <script>
+        function ValidateFunction() {
+            if (document.Joytrip.From.value == "") {
+                alert("Field should not be Empty!");
+                document.Joytrip.From.focus();
+                return false;
+            }
+
+            var v1 = document.Joytrip.From.value;
+            if (v1 != "") {
+                alert("Invalid Entry!");
+                document.Joytrip.To.focus();
+                return false;
+            }
+
+            if (document.Joytrip.To.value == "") {
+                alert("Field should not be Empty!");
+                document.Joytrip.To.focus();
+                return false;
+            }
+
+
+            var v2 = document.Joytrip.To.value;
+            if ((v2 != "") && (v1 == v2)) {
+                alert("Invalid Entry!");
+                document.Joytrip.To.focus();
+                return false;
+            }
+
+            if (document.Joytrip.TravelDate.value == "") {
+                alert("Field should not be Empty!");
+                document.Joytrip.TravelDate.focus();
+                return false;
+            }
+
+            if (/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/.test(document.Joytrip.TravelName.value) == false) {
+                alert("Invalid TravelTime!");
+                document.Joytrip.TravelDate.focus();
+                return false;
+            }
+
+            if (document.Joytrip.Time.value == "") {
+                alert("Field should not be Empty!");
+                document.Joytrip.Time.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="Joytrip">
+        <center>
+            <div>
+                <h1 style="color : blue">
+                    <U>Joy Trip</U>
+                </h1>
+                <table width=5 0% border="5">
+                    <tr>
+                        <th colspan="4" style="color:blue">Book Ticket</th>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                From</center>
+                        </td>
+                        <td>
+                            <center><input type="text" name="From" size="20" /></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                To</center>
+                        </td>
+                        <td>
+                            <center><input type="text" name="To" size="20" /></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                TravelDate(DD/MM/YYYY)</center>
+                        </td>
+                        <td>
+                            <center><input type="text" name="TravelDate" size="20" /></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                Time</center>
+                        </td>
+                        <td>
+                            <center>
+                                <select name="Select">
+                                                <option value="After 6pm">After 6pm</option>
+                                                <option value="Before 6pm">Before 6pm</option>
+                                                <option value="Any">Any</option>
+                                            </select>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color:blue">
+                            <center>
+                                Service Class</center>
+                        </td>
+                        <td>
+                            <center>
+                                <select="Select">
+                                    <option value="Luxury">Luxury</option>
+                                    <option value="Deluxe">Deluxe</option>
+                                    <option value="Any">Any</option>
+                                    </select>
+                            </center>
+                        </td>
+                    </tr>
+
+                </table><br><br>
+                <input type="button" value="Submit" onclick="ValidateFunction()">
+                <input type="button" value="Home">
+
+
+            </div>
+        </center>
+    </form>
+</body>
+
+</html>

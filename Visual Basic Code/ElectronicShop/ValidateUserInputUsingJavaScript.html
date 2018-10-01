@@ -1,0 +1,247 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function ValidateFunction() {
+            if (document.PaymentDetails.FirstName.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.FirstName.focus();
+                return false;
+            }
+            if (document.PaymentDetails.LastName.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.LastName.focus();
+                return false;
+            }
+            if (document.PaymentDetails.Address.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.Address.focus();
+                return false;
+            }
+            if (document.PaymentDetails.City.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.City.focus();
+                return false;
+            }
+            if (document.PaymentDetails.State.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.State.focus();
+                return false;
+            }
+            if (document.PaymentDetails.PostalCode.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.PostalCode.focus();
+                return false;
+            }
+            if (document.PaymentDetails.PostalCode.value.length != 6) {
+                alert("Invalid PostalCode!");
+                document.PaymentDetails.PostalCode.focus();
+                return false;
+            }
+            if (document.PaymentDetails.Country.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.Country.focus();
+                return false;
+            }
+            if (document.PaymentDetails.Phone.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.Phone.focus();
+                return false;
+            }
+            if (document.PaymentDetails.Fax.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.Fax.focus();
+                return false;
+            }
+
+            if (document.PaymentDetails.Email.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.Email.focus();
+                return false;
+            }
+
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.PaymentDetails.Email.value) == false) {
+                alert("Invalid Email-Id!");
+                document.PaymentDetails.Email.focus();
+                return false;
+            }
+
+            if (document.PaymentDetails.PaymentbyPayPal.checked == false && document.PaymentDetails.PaymentbyManual.checked == false && document.PaymentDetails.PaymentbyCredit.checked == false) {
+                alert("Please select the Payment Mode!");
+                document.PaymentDetails.PostalCode.focus();
+                return false;
+            }
+            if (document.PaymentDetails.AnyAdditionalRequests.value == "") {
+                alert("Field should not be Empty!");
+                document.PaymentDetails.PostalCode.focus();
+                return false;
+            }
+            if (!document.PaymentDetails.Acceptance.checked) {
+                alert("Terms & Conditions must be checked!");
+                document.PaymentDetails.PostalCode.focus();
+                return false;
+            }
+            alert("Submitted Successfully");
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="PaymentDetails">
+        <table>
+            <tr>
+                <td>
+                    <label for="Title">Title:</label>
+                </td>
+
+                <td>
+                    <select name="Title">
+              <option value = "Mr.">Mr.</option>
+              <option value = "Mr.">Ms.</option>
+              <option value = "Mr.">Mrs.</option>
+           </select><br><br></tr>
+            </td>
+
+            <tr>
+                <td>
+                    <label for="First Name">FirstName:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="FirstName"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Last Name">LastName:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="LastName"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Address">Address:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="Address"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="City">City:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="City"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="State">State:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="State"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Postal Code">PostalCode:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="PostalCode"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Country">Country:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="Country"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Phone">Phone:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="Phone"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Fax">Fax:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="Fax"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Email">Email:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="Email"><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Payment by">Paymentby:</label>
+                </td>
+
+                <td>
+                    <input type="radio" name="PaymentbyPayPal" value="PayPal">PayPal<br>
+                    <input type="radio" name="PaymentbyManual" value="Manual Pay on Arrival">Manual Pay on Arrival<br>
+                    <input type="radio" name="PaymentbyCredit" value="Credit Card">Credit Card<br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Any additional requests">AnyAdditionalRequests:</label>
+                </td>
+
+                <td>
+                    <textarea name="AnyAdditionalRequests" id="AnyAdditionalRequests" cols="40" rows="4"></textarea><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="checkbox" name="Acceptance">I agree with the <a href>Terms & Conditions.</a><br><br>
+                    <td>
+            </tr>
+
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <button onclick="ValidateFunction()">Confirm & Checkout</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
